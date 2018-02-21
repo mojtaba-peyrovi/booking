@@ -1,0 +1,118 @@
+body{
+    font-family: Helvetica, sans-serif, Arial;
+    color: #383838;
+}
+
+.logo-img {
+    width:140px;
+    height:auto;
+}
+#nav-price,
+
+#nav-flag{
+    font-size: 12px;
+    font-weight: 700;
+    color:	#f2f2f2;
+}
+#nav-price:hover,
+#nav-refer:hover,
+#nav-flag:hover{
+    color:	white;
+}
+
+#nav-refer{
+    font-size: 12px;
+    color:	#f2f2f2;
+}
+#nav-list{
+    background-color: transparent;
+    background-image: none;
+    border-color: #white;
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    border: 0.5px solid white;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+#nav-list:hover{
+    background-color: rgba(255, 255, 255,0.1);
+    cursor: pointer;
+}
+#nav-register,
+#nav-signin{
+    background: white;
+    border-radius: 3px;
+    color:#404040;
+    border: none;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 5px 10px;
+    margin-left: 15px;
+}
+#nav-register:hover,
+#nav-signin:hover{
+    color: #0077cc;
+    cursor: pointer;
+}
+#nav-second ul li a{
+    font-size:13px;
+    font-weight: 500;
+    color: #0091da;
+    padding-bottom: 10px;
+}
+#nav-second{
+    background-color:#f7f7f7;
+    border: 1px solid #e6e6e6;
+    padding: 0 2px 0;
+}
+#nav-second ul li:hover{
+border-bottom: 3px solid grey;
+}
+#nav-second ul li a:hover{
+color: #383838;
+}
+
+/* searcher */
+.searcher{
+    margin-top: 40px;
+}
+.search-form{
+    padding: 20px 30px;
+}
+.search-form span{
+    font-size: 12px;
+}
+#searcher-sub-title{
+    font-size: 12px;
+    margin-top: -10px;
+}
+
+/* featured section */
+.featured-1{
+    background-image: url('http://static.asiawebdirect.com/m/bangkok/portals/bangkok-com/shared/teasersL/TOURS/discover-bangkok-in-2-days/teaserMultiLarge/imageHilight/bangkok-day-trip.jpg');
+    padding-bottom: 50%;
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+    color: white;
+}
+.featured-2{
+    background-image: url('http://smartcity.eletsonline.com/wp-content/uploads/2017/11/Singapore.jpg');
+    padding-bottom: 50%;
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+    color: white;
+    }
+#featured-1-title,
+#featured-2-title{
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 0 0 10px;
+    margin-top: 30px;
+}
+#featured-1-subtitle,
+#featured-2-subtitle{
+    padding: 0 0 10px 10px;
+}
