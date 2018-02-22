@@ -1,5 +1,12 @@
 @extends('layouts.master')
+@section('stylesheet')
+    <!-- Custom styles for this template -->
+  <link href="{{ url('css/initial.css') }}" rel="stylesheet">
+    <!-- Home custom css -->
+<link href="{{ url('css/main_style.css') }}" rel="stylesheet">
+@endsection
 @section('content')
+    @include('partials.home_header')
 
     @include('partials.home_featured')
 
@@ -8,10 +15,11 @@
     <div class="container">
         <p id="apartments-title">More than just hotels… discover pure comfort with homes & apartments</p>
     <div class="row">
-        @include('partials.home_apartment_card')
-        @include('partials.home_apartment_card')
-        @include('partials.home_apartment_card')
-        @include('partials.home_apartment_card')
+        @foreach ($properties as $property)
+            @include('partials.home_apartment_card')
+        @endforeach
+
+
     </div>
         <div class="row">
             <section class="acommodation-types">

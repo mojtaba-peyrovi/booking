@@ -1,0 +1,47 @@
+.navigator span a{
+    font-size: 13px;
+    font-weight: 700;
+}
+.properties_title p{
+    font-size: 14px;
+}
+#single-property-title{
+    font-size: 14px;
+    font-weight: 700;
+    color: #1B75B2;
+    text-transform:capitalize;
+}
+.single-property{
+    border: 1px solid #cccccc;
+    padding: 10px 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 3px -2px #777;
+}
+#single-property-type{
+    font-size: 12px;
+    font-weight: lighter;
+    text-transform:capitalize;
+}
+#single-property-subtitle{
+font-size: 11px;
+}
+#single-property-about{
+    font-size: 11px;
+}
+#single-property-badges span {
+    font-size: 25px;
+    padding-left: 10px;
+}
+/*right side filters */
+#properties_filters{
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+}
+#properties_filters ul{
+    list-style: none;
+    background-color: white;
+}
+.badge-grey{
+    color:#D4D5D6;
+}

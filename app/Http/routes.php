@@ -11,10 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.home');
-});
+Route::get('/', [
+    'uses' => 'pagesController@getHome',
+    'as' => 'home'
+]);
 
-Route::get('/master', function () {
-    return view('layouts.master');
-});
+Route::get('/properties/index', [
+    'uses' => 'propertiesController@getIndex',
+    'as' => 'properties.index'
+]);

@@ -11,21 +11,17 @@
     <title>booking.com @yield('title')</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{ URL::to('bootstrap/bootstrap.css')}}" rel="stylesheet">
+    <link href="{{ url('bootstrap/bootstrap.css')}}" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="initial.css" rel="stylesheet">
-
-    <!-- custom css -->
-    <link href="style.css" rel="stylesheet">
+    @yield('stylesheet')
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
   </head>
 
   <body>
+    @include('partials.nav')
 
-    @include('partials.header')
 
     <main role="main">
 
