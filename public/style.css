@@ -105,14 +105,133 @@ color: #383838;
     background-position: center center;
     color: white;
     }
+.featured-3{
+    background-image: url('http://blog.buckitdream.com/wp-content/uploads/2017/11/tokyo-mud-bath-bar-mudbath0716.jpg');
+    padding-bottom: 50%;
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+    color: white;
+    }
+.featured-4{
+    background-image: url('https://lonelyplanetimages.imgix.net/a/g/hi/t/cb3db4b94cdc8a8fff74e2fac7cd6cb8-chiang-mai.jpg?sharp=10&vib=20&w=1200');
+    padding-bottom: 50%;
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+    color: white;
+    }
+.featured-5{
+    background-image: url('http://static.asiawebdirect.com/m/phuket/portals/hong-kong-hotels-ws/homepage/nightlife/pagePropertiesImage/hong-kong-nightlife.jpg.jpg');
+    padding-bottom: 50%;
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+    color: white;
+    }
 #featured-1-title,
-#featured-2-title{
+#featured-2-title,
+#featured-3-title,
+#featured-4-title,
+#featured-5-title{
     font-size: 20px;
     font-weight: 700;
     padding: 10px 0 0 10px;
     margin-top: 30px;
 }
 #featured-1-subtitle,
-#featured-2-subtitle{
+#featured-2-subtitle,
+#featured-3-subtitle,
+#featured-4-subtitle,
+#featured-5-subtitle{
     padding: 0 0 10px 10px;
+}
+
+.featured-1:hover,
+.featured-2:hover,
+.featured-3:hover,
+.featured-4:hover,
+.featured-5:hover{
+
+
+}
+/*subscription */
+.list-place,
+.subscribe{
+    background-color: white;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+}
+.list-price div{
+    font-size: 8px;
+}
+#list-btn{
+    background-color: #1B75B2;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    border-radius: 3px;
+    padding: 10px 50px 10px 50px;
+}
+#list-btn:hover,
+#subscribe-btn:hover
+{
+    background: #153580;
+    text-decoration: none;
+}
+#subscribe-btn{
+    background-color: #1B75B2;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    border-radius: 3px;
+    padding: 10px 30px 10px 30px;
+}
+.subscription{
+    background-color: #f7f7f7;
+}
+
+/*aartments */
+#apartments-title,
+#acommodation-types-title{
+    font-size: 18px;
+    font-weight: 700;
+    color: #383838;
+}
+.apartment-btn{
+    background-color:#153580;
+    color: white;
+    border: 0;
+ box-shadow: none;
+ border-radius: 5px 5px 5px 0;
+}
+.apartment-class{
+    color: #1B75B2;
+    font-size: 16px;
+    font-weight: 400;
+}
+.apartment-reviews{
+    font-size: 12px;
+    font-weight: 400;
+}
+/* apartment-card */
+.card-img-lowest-price{
+    margin-top:-30px;
+    color:white;
+    font-size: 11px;
+}
+.card-title{
+    font-size: 13px;
+    font-weight: 700;
+}
+.card-text{
+    font-size: 12px;
+}
+.card{
+    box-shadow: 0 2px 3px -2px #777;
+}
+/*acommocation types */
+.acommodation-types-photo{
+    width: 200px;
+    height: auto;
 }
