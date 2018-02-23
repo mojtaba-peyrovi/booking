@@ -1,0 +1,22 @@
+.red{
+    color:red;
+}
+
+.logo-img {
+    width:140px;
+    height:auto;
+}
+
+#property_type_indicator{
+    width: 100%;
+    height: 30px;
+    background-color: green;
+}
+.property-featured-photo{
+    width: 300px;
+    height: auto;
+}
+.property-featured-photo img{
+    max-width: 100%;
+    max-height: 100%;
+}

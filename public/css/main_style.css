@@ -73,6 +73,12 @@ border-bottom: 3px solid grey;
 color: #383838;
 }
 
+/*navigator */
+#navigator-final{
+    font-size: 13px;
+    font-weight: 700;
+}
+
 /* searcher */
 .searcher{
     margin-top: 40px;

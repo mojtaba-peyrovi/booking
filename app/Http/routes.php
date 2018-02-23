@@ -16,7 +16,19 @@ Route::get('/', [
     'as' => 'home'
 ]);
 
-Route::get('/properties/index', [
+Route::get('/properties', [
     'uses' => 'propertiesController@getIndex',
     'as' => 'properties.index'
 ]);
+Route::get('/properties/create' ,[
+    'uses' => 'propertiesController@getCreate',
+    'as' => 'properties.create'
+]);
+Route::get('/properties/{property}', [
+    'uses' => 'propertiesController@getShow',
+    'as' => 'properties.show'
+]);
+
+Route::get('/test', function(){
+    return view('test');
+});

@@ -42,3 +42,26 @@
         </div>
     </section>
 @endsection
+@section('js')
+    <script type="text/javascript">
+    var ref = $('#button');
+    var popup = $('#popup');
+    popup.hide();
+    ref.hover(function(){
+        popup.show();
+        var popper = new Popper(ref,popup,{
+            placement: 'top'
+        });
+        setTimeout(function(){
+            popup.remove();
+        },2000);
+    });
+    var badge = $('#badge');
+    badge.hover(function(){
+        badge.addClass('badge-red');
+    });
+
+
+    </script>
+
+@endsection

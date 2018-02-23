@@ -14,4 +14,11 @@ class propertiesController extends Controller
         $properties = Property::all();
         return view('properties.index',['properties' => $properties]);
     }
+    public function getCreate(){
+        return view('properties.create');
+    }
+    public function getShow($id){
+        $property = Property::find($id);
+        return view('properties.show',['property' => $property]);
+    }
 }
