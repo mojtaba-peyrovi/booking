@@ -12,6 +12,8 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{{ url('bootstrap/bootstrap.css')}}" rel="stylesheet">
+    <!-- Bootstrap Form Helpers -->
+    <link href="bootstrap/bootstrap-formhelpers.css" rel="stylesheet" media="screen">
 
     @yield('stylesheet')
 

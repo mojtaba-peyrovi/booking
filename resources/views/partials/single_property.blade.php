@@ -31,8 +31,3 @@
             </div>
         </div>
     </div>
-
-    <div id="popup" style="background-color:orange;">
-        hi Moji
-    </div>
-    <button type="button" id="button">button</button>

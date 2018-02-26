@@ -8,6 +8,10 @@
 <link href="{{ url('css/properties.css') }}" rel="stylesheet">
 @endsection
 @section('content')
+    <div class="col-md-4 offset-md-4">
+        @include('partials.backend_messages')
+    </div>
+
     <section class="properties-list">
         <div class="container">
             <div class="navigator my-4">
@@ -37,6 +41,7 @@
                     @foreach ($properties as $property)
                         @include('partials.single_property')
                     @endforeach
+                     {{ $properties->links() }}
                 </div>
             </div>
         </div>
@@ -61,7 +66,12 @@
         badge.addClass('badge-red');
     });
 
-
+    setTimeout(function(){
+    $('#success-alert').remove();
+}, 3000);
     </script>
+
+
+
 
 @endsection

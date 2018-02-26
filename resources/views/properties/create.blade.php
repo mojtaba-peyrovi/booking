@@ -14,28 +14,30 @@
 @section('backend_content')
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-<h3 class="h2"><i class="fas fa-plus"></i> Add A Property</h3>
+<h3 class="h4"><i class="fas fa-plus"></i> Add A Property</h3>
 </div>
 
 
-  <form>
+  <form method="post" action="{{route('properties.index')}}">
+    {{ csrf_field() }}
     <div class="row">
       <div class="col-md-6">
         <fieldset class="form-group">
           <label for="title">Property Title: </label>
-          <input type="text" class="form-control" id="title">
+          <input type="text" class="form-control" id="title" name='title'>
           <small class="text-muted">We'll never share your email with anyone else.</small>
         </fieldset>
 
               <fieldset class="form-group">
                 <label for="type">Property Type: </label>
                 <select class="form-control selectpicker" name="type" id="type">
-                  <option value="one">Hotel</option>
-                  <option value="two">Resort</option>
-                  <option value="three">Villa</option>
-                  <option value="three">Apartment</option>
-                  <option value="four">Townhouse</option>
-                  <option value="five">Condominium</option>
+                  <option disabled selected value> -- select an option -- </option>
+                  <option value="hotel">Hotel</option>
+                  <option value="resort">Resort</option>
+                  <option value="villa">Villa</option>
+                  <option value="apartment">Apartment</option>
+                  <option value="townhouse">Townhouse</option>
+                  <option value="condominium">Condominium</option>
                 </select>
               </fieldset>
 
@@ -43,7 +45,7 @@
           <div class="col-md-6">
             <fieldset class="form-group">
               <label for="country">Country: </label>
-              <input type="text" class="form-control" id="country">
+              <input type="text" class="form-control" id="country" name="country">
               <small class="text-muted">Select a coutry</small>
             </fieldset>
           </div>
@@ -60,102 +62,114 @@
         </fieldset>
 
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-3">
             <fieldset class="form-group">
               <label for="rooms">Rooms: </label>
               <input type="number" class="form-control" id="rooms" name="rooms">
               <small class="text-muted">How many rooms?</small>
             </fieldset>
           </div>
-          <div class="col-md-6 mt-5">
-              <input type="checkbox" aria-label="Checkbox for following text input">
-              <label for="creditCard">Is credit card needed for this property?</label>
+          <div class="col-md-9 mt-5">
+              <div class="row">
+                <input type="hidden" name="creditCardNeeded" value="0">
+                <input name="creditCardNeeded" type="checkbox" value="1">
+                <label for="creditCardNeeded" class="ml-2"> Is credit card needed for this property?</label>
+              </div>
           </div>
         </div>
-
-
 
       </div>
 
       <div class="col-md-6">
-        <label for="exampleSelect2">Badges: </label>
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-6">
             <fieldset class="form-group">
-              <div class="text-center">Badge One</div><select class="form-control selectpicker" name="type" id="type">
-                <option value="one">Free Wifi</option>
-                <option value="two">Washing Machine</option>
-                <option value="three">Fitness</option>
-                <option value="three">Air Conditioner</option>
-                <option value="four">TV</option>
-                <option value="five">Smoking Room</option>
+              <div class="text-center mb-2">Badge One</div><select class="form-control selectpicker" name="badge1" id="type">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="Free Wifi">Free Wifi</option>
+                <option value="Washing Machine">Washing Machine</option>
+                <option value="Fitness">Fitness</option>
+                <option value="Air Conditioner">Air Conditioner</option>
+                <option value="TV">TV</option>
+                <option value="Smoking Room">Smoking Room</option>
               </select>
             </fieldset>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-6">
             <fieldset class="form-group">
-              <div class="text-center">Badge Two</div><select class="form-control selectpicker" name="type" id="type">
-                <option value="one">Free Wifi</option>
-                <option value="two">Washing Machine</option>
-                <option value="three">Fitness</option>
-                <option value="three">Air Conditioner</option>
-                <option value="four">TV</option>
-                <option value="five">Smoking Room</option>
-              </select>
-            </fieldset>
-          </div>
-          <div class="col-md-3">
-            <fieldset class="form-group">
-              <div class="text-center">Badge Three</div><select class="form-control selectpicker" name="type" id="type">
-                <option value="one">Free Wifi</option>
-                <option value="two">Washing Machine</option>
-                <option value="three">Fitness</option>
-                <option value="three">Air Conditioner</option>
-                <option value="four">TV</option>
-                <option value="five">Smoking Room</option>
-              </select>
-            </fieldset>
-          </div>
-          <div class="col-md-3">
-            <fieldset class="form-group">
-              <div class="text-center">Badge Four</div><select class="form-control selectpicker" name="type" id="type">
-                <option value="one">Free Wifi</option>
-                <option value="two">Washing Machine</option>
-                <option value="three">Fitness</option>
-                <option value="three">Air Conditioner</option>
-                <option value="four">TV</option>
-                <option value="five">Smoking Room</option>
+              <div class="text-center mb-2">Badge Two</div><select class="form-control selectpicker" name="badge2" id="type">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="Free Wifi">Free Wifi</option>
+                <option value="Washing Machine">Washing Machine</option>
+                <option value="Fitness">Fitness</option>
+                <option value="Air Conditioner">Air Conditioner</option>
+                <option value="TV">TV</option>
+                <option value="Smoking Room">Smoking Room</option>
               </select>
             </fieldset>
           </div>
         </div>
+        <div class="row">
+          <div class="col-md-6">
+            <fieldset class="form-group">
+              <div class="text-center">Badge Three</div><select class="form-control selectpicker" name="badge3" id="type">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="Free Wifi">Free Wifi</option>
+                <option value="Washing Machine">Washing Machine</option>
+                <option value="Fitness">Fitness</option>
+                <option value="Air Conditioner">Air Conditioner</option>
+                <option value="TV">TV</option>
+                <option value="Smoking Room">Smoking Room</option>
+              </select>
+            </fieldset>
+          </div>
+          <div class="col-md-6">
+            <fieldset class="form-group">
+              <div class="text-center">Badge Four</div><select class="form-control selectpicker" name="badge4" id="type">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="Free Wifi">Free Wifi</option>
+                <option value="Washing Machine">Washing Machine</option>
+                <option value="Fitness">Fitness</option>
+                <option value="Air Conditioner">Air Conditioner</option>
+                <option value="TV">TV</option>
+                <option value="Smoking Room">Smoking Room</option>
+              </select>
+            </fieldset>
+          </div>
+        </div>
+        <hr>
         <div>Additional Options:</div>
         <div class="row">
           <div class="col-md-6">
             <div class="mt-3">
-                <input type="checkbox" aria-label="Checkbox for following text input">
+                <input type="hidden" name="parking" value="0">
+                <input type="checkbox" aria-label="Checkbox for following text input" name="parking" value="1">
                 <small>Free Parking</small>
             </div>
             <div class="mt-3">
-                <input type="checkbox" aria-label="Checkbox for following text input">
+                <input type="hidden" name="balcony" value="0">
+                <input type="checkbox" aria-label="Checkbox for following text input" name="balcony" value="1">
                 <small>Balcony</small>
             </div>
           </div>
           <div class="col-md-6">
             <div class="mt-3">
-                <input type="checkbox" aria-label="Checkbox for following text input">
+                <input type="hidden" name="bathroom" value="0">
+                <input type="checkbox" aria-label="Checkbox for following text input" name="bathroom" value="1">
                 <small>Bathroom</small>
             </div>
             <div class="mt-3">
-                <input type="checkbox" aria-label="Checkbox for following text input">
+                <input type="hidden" name="shuttle" value="0">
+                <input type="checkbox" aria-label="Checkbox for following text input" name="shuttle" value="1">
                 <small>Shuttle Bus</small>
             </div>
           </div>
         </div>
-        <fieldset class="form-group mt-4">
-          <label for="exampleInputFile">Featured Photo:</label>
+        <hr>
 
-        </fieldset>
+          <label >Featured Photo:</label>
+
+
         <div class="property-featured-photo">
 
           <input type='file' onchange="readURL(this);"/>
@@ -201,7 +215,7 @@
      }
 
  }
- 
+
   </script>
 
 @endsection

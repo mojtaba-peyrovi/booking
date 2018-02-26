@@ -24,10 +24,22 @@ Route::get('/properties/create' ,[
     'uses' => 'propertiesController@getCreate',
     'as' => 'properties.create'
 ]);
+
+Route::post('/properties',[
+    'uses' => 'propertiesController@postProperties',
+    'as' => 'properties.create'
+]);
 Route::get('/properties/{property}', [
     'uses' => 'propertiesController@getShow',
     'as' => 'properties.show'
 ]);
+
+Route::get('/deals', [
+    'uses' => 'dealsController@getIndex',
+    'as' => 'deals.index'
+]);
+
+
 
 Route::get('/test', function(){
     return view('test');

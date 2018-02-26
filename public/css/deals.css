@@ -1,0 +1,123 @@
+/* searcher */
+.side-searcher{
+    background-color: #F7BB0E;
+}
+.side-searcher h3{
+    font-size: 24px;
+    font-weight: 200;
+}
+
+.side-searcher-content{
+
+}
+
+
+.side-searcher-title{
+    font-size: 24px;
+
+}
+
+.side-searcher-subtitle{
+    font-size: 13px;
+}
+#deals-title{
+    font-size: 25px;
+    font-weight: 700;
+}
+/*single deal */
+#single-deal-main{
+    margin-left: -30px;
+}
+.single-deal{
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.single-deal img{
+    width: 150px;
+    height: auto;
+    border-radius: 3px;
+    margin-bottom: 20px;
+
+}
+.single-deal-title{
+    color: #1B75B2;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+#rank{
+    color: #1B75B2;
+    font-size: 17px;
+    font-weight: 300;
+    float: right;
+}
+#reviews{
+    font-size: 12px;
+}
+#single-deal-reviews{
+    float: right;
+    margin-right: -85px;
+}
+
+.deal-class{
+    color: #1B75B2;
+    font-size: 16px;
+    font-weight: 400;
+}
+.deal-reviews{
+    font-size: 12px;
+    font-weight: 400;
+}
+.deal-btn{
+    background-color:#153580;
+    color: white;
+    border: 0;
+ box-shadow: none;
+ border-radius: 5px 5px 5px 0;
+}
+.single-deal-address{
+
+}
+#single-deal-city{
+    font-size: 12px;
+    text-decoration: underline;
+}
+#single-deal-city-center{
+    font-size: 12px;
+}
+.who-is-booking{
+    font-size: 12px;
+}
+.single-deal-credit{
+    font-size: 13px;
+    font-weight: 700;
+    color: #009900;
+}
+.single-deal-demand{
+    font-size: 13px;
+    font-weight: 700;
+    color: #ff0000;
+
+}
+.great-value span{
+    margin-left:5px;
+    margin-left: -1px;
+
+}
+.bed-type{
+    font-size: 13px;
+}
+.single-deal-price{
+    color: #009900;
+    margin-right: -40px;
+}
+.price{
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.breakfast,
+.cancellation
+{
+    font-size: 12px;
+}

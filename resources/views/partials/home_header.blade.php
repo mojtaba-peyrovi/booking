@@ -25,17 +25,23 @@
         <div class="row">
           <div class="col-md-6">
             <span>Check-in</span>
-            <input type="text" name="" value="" class="form-control">
+            <div class="bfh-datepicker" style="background-color:white;"></div>
+
+
           </div>
           <div class="col-md-6">
             <span>Check-out</span>
-            <input type="text" name="" value="" class="form-control">
+            <div class="bfh-datepicker" style="background-color:white;"></div>
+
+
           </div>
         </div> <!-- end of row -->
         <div class="form-check form-check-inline mt-4">
           <input class="form-check-input" type="checkbox" name="inlineRadioOptions" id="inlineRadio1" value="option1">
           <label class="form-check-label" for="inlineRadio1"><span>Im travelling for work <i class="fas fa-question-circle"></i></span></label>
         </div>
+
+        <input type="submit" name="" value="Search" class="btn btn-primary float-right mt-3 search-btn">
 
       </div>
     </div> <!-- end of row -->
