@@ -7,10 +7,6 @@
     font-weight: 200;
 }
 
-.side-searcher-content{
-
-}
-
 
 .side-searcher-title{
     font-size: 24px;
@@ -38,7 +34,14 @@
     height: auto;
     border-radius: 3px;
     margin-bottom: 20px;
+}
 
+#single-img img{
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   z-index: -1;
+   margin-left: 15px;
 }
 .single-deal-title{
     color: #1B75B2;
@@ -57,7 +60,7 @@
 }
 #single-deal-reviews{
     float: right;
-    margin-right: -85px;
+    margin-right: -25px;
 }
 
 .deal-class{
@@ -110,7 +113,7 @@
 }
 .single-deal-price{
     color: #009900;
-    margin-right: -40px;
+
 }
 .price{
     font-size: 18px;
@@ -120,4 +123,7 @@
 .cancellation
 {
     font-size: 12px;
+}
+#single-deal-btn{
+   font-size: 10px;
 }

@@ -39,6 +39,15 @@ Route::get('/deals', [
     'as' => 'deals.index'
 ]);
 
+Route::get('/deals/create', [
+    'uses' => 'dealsController@getCreate',
+    'as' => 'deals.create'
+]);
+
+Route::post('/deals' ,[
+    'uses' => 'dealsController@postCreate',
+    'as' => 'deals.create'
+]);
 
 
 Route::get('/test', function(){
