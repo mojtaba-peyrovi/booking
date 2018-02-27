@@ -8,36 +8,25 @@
 </a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="#">
+<a class="nav-link" href="{{ url('/properties/create')}}">
   <span data-feather="file"></span>
-  Orders
+  Add a Property
 </a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="#">
+<a class="nav-link" href="{{ url('/deals/create')}}">
   <span data-feather="shopping-cart"></span>
-  Products
+  Add a deal
 </a>
 </li>
 <li class="nav-item">
 <a class="nav-link" href="#">
   <span data-feather="users"></span>
-  Customers
-</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="#">
-  <span data-feather="bar-chart-2"></span>
-  Reports
-</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="#">
-  <span data-feather="layers"></span>
-  Integrations
+  Add a Country
 </a>
 </li>
 </ul>
+<hr>
 
 <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
 <span>Saved reports</span>

@@ -7,10 +7,13 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use App\Property;
+
+use DB;
 class pagesController extends Controller
 {
     public function getHome(){
         $properties = Property::all();
-        return view('pages.home',['properties'=>$properties]);
+        $count = DB::table('properties')->count(DB::raw('DISTINCT title'));
+        return view('pages.home',compact('properties','count'));
     }
 }

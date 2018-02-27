@@ -49,6 +49,11 @@ Route::post('/deals' ,[
     'as' => 'deals.create'
 ]);
 
+Route::get('/deals/{deal}',[
+    'uses' => 'dealsController@getShow',
+    'as' => 'deals.show'
+]);
+
 
 Route::get('/test', function(){
     return view('test');

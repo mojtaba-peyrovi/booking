@@ -1,0 +1,52 @@
+
+.navigator{
+    list-style-type: none;
+    margin-top: 50px;
+}
+.navigator li{
+    display: inline-block;
+}
+.navigator li a,
+#deal_show_navigate_title{
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.navigator li div{
+    font-size: 10px;
+    color:#bfbfbf;
+}
+.deal-show-top-buttons{
+    list-style-type: none;
+}
+.deal-show-top-buttons li{
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    color: #4d94ff;
+    background-color: #e6f0ff;
+    padding: 5px 30px;
+    border-bottom: 1px solid black;
+    margin-left: -3px;
+}
+#deal-show-title{
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-left: 25px;
+
+}
+.deal-show-address{
+    margin-left: 25px;
+}
+
+#deal-show-address{
+    font-size: 12px;
+}
+#map-marker{
+    color:#3399ff;
+}
+#show-map-link{
+    font-size: 12px;
+    text-decoration: underline;
+}

@@ -1,22 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-<style>
-img {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: -1;
-}
-</style>
-</head>
-<body>
-
-<h1>This is a heading</h1>
-
-<img src="https://q-ak.bstatic.com/xdata/images/hotel/square200/94841340.jpg?k=381a8beff2b08d8282e566c52667f11705f34be9826e34f8a274c05eac3a212f&o=" width="100" height="140">
-
-<p>Because the image has a z-index of -1, it will be placed behind the text.</p>
-
-</body>
-</html>
+@extends('layouts.master')
+@section('title')
+  | {{ $deal->property->title }}
+@endsection
+@section('stylesheet')
+    <!-- Custom styles for this template -->
+  <link href="{{ url('css/initial.css') }}" rel="stylesheet">
+    <!-- Home custom css -->
+<link href="{{ url('css/main_show_deal_style.css') }}" rel="stylesheet">
+@endsection
+@section('content')
+  <div class="container">
+    <section class="navigator">
+      <span><a href="{{ route('home') }}">Home</a> ></span>
+      <span>
+        <div class="">
+          <a href="{{ route('properties.index') }}">{{ $deal->property->country }}</a> >
+        </div>
+        <div>
+          {{ $count }}
+        </div>
+      </span>
+      <span><a href="#">{{$deal->property->city }}</a> ></span>
+      <span class="deal_show_property_name">{{ $deal->property->title }}</span>
+    </section>
+  </div>
+@endsection

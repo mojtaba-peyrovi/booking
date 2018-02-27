@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@section('title')
+  | ({{ $count }}) Hotels Worldwide
+@endsection
 @section('stylesheet')
     <!-- Custom styles for this template -->
   <link href="{{ url('css/initial.css') }}" rel="stylesheet">
