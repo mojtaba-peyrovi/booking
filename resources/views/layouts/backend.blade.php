@@ -25,7 +25,7 @@
     <div class="container-fluid">
       <div class="row">
 
-        @include('partials.backend_sidebar')
+      <!--  @include('partials.backend_sidebar')  disabled here to be added on views--> 
 
         @yield('backend_content')
       </div>

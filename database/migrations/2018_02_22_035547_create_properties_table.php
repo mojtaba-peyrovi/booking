@@ -35,6 +35,10 @@ class CreatePropertiesTable extends Migration
             $table->boolean('swimmingPool');
             $table->boolean('parking');
             $table->boolean('airportShuttle');
+            $table->boolean('noSmokingRoom');
+            $table->boolean('petsAllowed');
+            $table->string('map');
+
             $table->timestamps();
         });
     }

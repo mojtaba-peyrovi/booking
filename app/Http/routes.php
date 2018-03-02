@@ -13,48 +13,97 @@
 
 Route::get('/', [
     'uses' => 'pagesController@getHome',
-    'as' => 'home'
+    'as' => 'home',
+    'middleware' => 'guest'
+]);
+
+Route::get('/backend', [
+    'uses' => 'pagesController@getbackend',
+    'as' => 'backend',
+    'middleware' => 'auth'
 ]);
 
 Route::get('/properties', [
     'uses' => 'propertiesController@getIndex',
-    'as' => 'properties.index'
+    'as' => 'properties.index',
+    'middleware' => 'guest'
 ]);
 Route::get('/properties/create' ,[
     'uses' => 'propertiesController@getCreate',
-    'as' => 'properties.create'
+    'as' => 'properties.create',
+    'middleware' => 'auth'
 ]);
 
 Route::post('/properties',[
     'uses' => 'propertiesController@postProperties',
-    'as' => 'properties.create'
+    'as' => 'properties.create',
+    'middleware' => 'auth'
 ]);
 Route::get('/properties/{property}', [
     'uses' => 'propertiesController@getShow',
-    'as' => 'properties.show'
+    'as' => 'properties.show',
+    'middleware' => 'guest'
 ]);
 
 Route::get('/deals', [
     'uses' => 'dealsController@getIndex',
-    'as' => 'deals.index'
+    'as' => 'deals.index',
+    'middleware' => 'guest'
 ]);
 
 Route::get('/deals/create', [
     'uses' => 'dealsController@getCreate',
-    'as' => 'deals.create'
+    'as' => 'deals.create',
+    'middleware' => 'auth'
 ]);
 
 Route::post('/deals' ,[
     'uses' => 'dealsController@postCreate',
-    'as' => 'deals.create'
+    'as' => 'deals.create',
+    'middleware' => 'auth'
 ]);
 
 Route::get('/deals/{deal}',[
     'uses' => 'dealsController@getShow',
-    'as' => 'deals.show'
+    'as' => 'deals.show',
+    'middleware' => 'guest'
 ]);
 
 
 Route::get('/test', function(){
     return view('test');
 });
+
+Route::get('/admin/signup',[
+    'uses' => 'usersController@getAdminSignup',
+    'as' => 'admin.signup',
+    'middleware' => 'guest'
+]);
+
+Route::post('/admin/signup',[
+    'uses' => 'usersController@postAdminSignup',
+    'as' => 'admin.signup',
+    'middleware' => 'guest'
+]);
+Route::get('/admin/signin',[
+    'uses' => 'usersController@getAdminSignin',
+    'as' => 'admin.signin',
+    'middleware' => 'guest'
+]);
+
+Route::post('/admin/signin',[
+    'uses' => 'usersController@postAdminSignin',
+    'as' => 'admin.signin',
+    'middleware' => 'guest'
+]);
+Route::get('/admin/profile',[
+    'uses' => 'usersController@getAdminProfile',
+    'as' => 'admin.profile',
+    'middleware' => 'auth'
+]);
+
+Route::get('/admin/logout',[
+    'uses' => 'usersController@getAdminLogout',
+    'as' => 'admin.logout',
+    'middleware' => 'auth'
+]);

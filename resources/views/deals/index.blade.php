@@ -47,7 +47,7 @@
                 <hr>
 
                 @foreach ($deals as $deal)
-                        @include('partials.single_deal')
+                        @include('deals.single_deal_test')
                 @endforeach
                 {{ $deals->links() }}
             </div>

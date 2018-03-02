@@ -16,4 +16,7 @@ class pagesController extends Controller
         $count = DB::table('properties')->count(DB::raw('DISTINCT title'));
         return view('pages.home',compact('properties','count'));
     }
+    public function getbackend(){
+        return view('pages.backend');
+    }
 }
