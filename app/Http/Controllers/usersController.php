@@ -31,7 +31,7 @@ class usersController extends Controller
 
         Auth::login($user);
         //return
-        return redirect()->route('backend');
+        return redirect()->route('dashboard');
     }
     public function getAdminSignin(){
         return view('user.admin-signin');
@@ -43,7 +43,7 @@ class usersController extends Controller
             'password' => 'required'
         ]);
         if(Auth::attempt(['email'=> request('email'),'password' => request('password')])){
-            return redirect()->route('backend');
+            return redirect()->route('dashboard');
         }
         return redirect()->back();
     }

@@ -14,12 +14,13 @@
 Route::get('/', [
     'uses' => 'pagesController@getHome',
     'as' => 'home',
-    'middleware' => 'guest'
+
+
 ]);
 
-Route::get('/backend', [
+Route::get('/dashboard', [
     'uses' => 'pagesController@getbackend',
-    'as' => 'backend',
+    'as' => 'dashboard',
     'middleware' => 'auth'
 ]);
 

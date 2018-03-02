@@ -17,6 +17,6 @@ class pagesController extends Controller
         return view('pages.home',compact('properties','count'));
     }
     public function getbackend(){
-        return view('pages.backend');
+        return view('pages.dashboard');
     }
 }

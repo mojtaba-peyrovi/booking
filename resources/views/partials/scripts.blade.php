@@ -8,3 +8,4 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"></script>
 <!-- Bootstrap Form Helpers -->
 <script src="bootstrap/bootstrap-formhelpers.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.0/feather.js"></script>

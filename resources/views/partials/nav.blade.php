@@ -15,7 +15,7 @@
         <a class="nav-link" href="#" id="nav-refer">Refer friends and earn</a>
       </li>
       <li class="">
-        <button type="button" name="" id="nav-list" >List your property</button>
+        <button type="button" class="btn btn-outline-warning btn-sm" onclick="window.location.href='{{ url('/admin/signin')}}'">Admin Area</button>
       </li>
       <li class="">
         <button type="button" href="#" id="nav-register">Register</button>
