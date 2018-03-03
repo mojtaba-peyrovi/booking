@@ -13,7 +13,7 @@
             <div class="col-md-4 offset-md-4">
                 <div class="text-center">
                     <h2 class="mt-5">Admin Sign In</h2>
-                    <small class="text-muted lead">You are not registered yet? click <a href="{{ route('admin.signup') }}">Here</a></small>
+                    <small class="text-muted lead">You are not the admin? click <a href="{{ route('home') }}">Here</a></small>
                 </div>
 
                 <form method="post" action="{{ route('admin.signin') }}" class="mt-5">

@@ -27,7 +27,7 @@ Route::get('/dashboard', [
 Route::get('/properties', [
     'uses' => 'propertiesController@getIndex',
     'as' => 'properties.index',
-    'middleware' => 'guest'
+    
 ]);
 Route::get('/properties/create' ,[
     'uses' => 'propertiesController@getCreate',
@@ -38,18 +38,18 @@ Route::get('/properties/create' ,[
 Route::post('/properties',[
     'uses' => 'propertiesController@postProperties',
     'as' => 'properties.create',
-    'middleware' => 'auth'
+
 ]);
 Route::get('/properties/{property}', [
     'uses' => 'propertiesController@getShow',
     'as' => 'properties.show',
-    'middleware' => 'guest'
+
 ]);
 
 Route::get('/deals', [
     'uses' => 'dealsController@getIndex',
     'as' => 'deals.index',
-    'middleware' => 'guest'
+
 ]);
 
 Route::get('/deals/create', [

@@ -7,6 +7,7 @@ use App\Deal;
 use App\Property;
 use Illuminate\Database\Query\Builder;
 use DB;
+use Auth;
 
 class dealsController extends Controller
 {
@@ -26,7 +27,8 @@ class dealsController extends Controller
         $prop_id = Property::where('title', $title)->first()->id;
         Deal::create([
             'property_id' => $prop_id,
-            'price' => request('price')
+            'price' => request('price'),
+            'user_id' => Auth::user()->id
         ]);
         return redirect()->route('deals.index');
     }

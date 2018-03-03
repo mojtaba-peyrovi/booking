@@ -22,9 +22,9 @@
         </div>
         <div class="col-md-2">
           <span>Your Properties</span>
-          <span class="badge badge-pill badge-warning">232</span>
+          <span class="badge badge-pill badge-warning">{{ $count_properties }}</span>
           <span>Your Deals</span>
-          <span class="badge badge-pill badge-danger text-right">34</span>
+          <span class="badge badge-pill badge-danger text-right">{{ $count_deals }}</span>
         </div>
 
 

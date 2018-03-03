@@ -10,6 +10,8 @@ use App\Property;
 
 use Session;
 
+use Auth;
+
 class propertiesController extends Controller
 {
     public function getIndex(){
@@ -25,6 +27,7 @@ class propertiesController extends Controller
     }
     public function postProperties(Request $request){
         Property::create([
+            'user_id' => Auth::user()->id,
             'title' => request('title'),
             'type'=> request('type'),
             'country' => request('country'),

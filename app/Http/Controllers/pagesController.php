@@ -17,6 +17,8 @@ class pagesController extends Controller
         return view('pages.home',compact('properties','count'));
     }
     public function getbackend(){
-        return view('pages.dashboard');
+        $count_deals = DB::table('deals')->count(DB::raw('user_id'));
+        $count_properties = DB::table('properties')->count(DB::raw('user_id'));
+        return view('pages.dashboard',compact('count_deals','count_properties'));
     }
 }
